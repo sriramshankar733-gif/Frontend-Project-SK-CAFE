@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>🍵 SK CAFE </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+    /* overflow */
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /*homebg*/
+    #sk {
+      background-image: url(front\ page\ img.jpeg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin-top: 70px;
+      padding-bottom: 200px;
+      height: 100vh;
+    }
+    /* logo */
+  #wq
+  {font-size: xx-large;
+    text-decoration: none;
+    color: rgb(255, 255, 255);}
+
+    #wq:hover{color: rgb(191, 190, 190);
+     transform: scale(1.01);
+      transition: transform 0.3s ease-in-out;
+        }
+
+        /* contact and order btn*/
+#uu:hover{transform: scale(1.08);
+      transition: transform 0.3s ease-in-out;
+
+}
+        
+            /* coffee menu */
+    #ff {
+      width: 200px;
+      height: 200px;
+      border: 2px;
+      border-style: solid;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #p {
+      justify-content: center;
+    }
+
+    #menuimg {
+      background-image: url(https://media.gettyimages.com/id/1287586063/video/blurred-motion-of-people-in-restaurant-blur-background.jpg?s=640x640&k=20&c=KdZjJw8MWSG11Y761TiIspjcr_yHvid21JI07eqzfm0=);
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: white;
+    }
+
+    #sri {
+      margin: 0 0 0 200px;
+    }
+
+    /* img gallery */
+    #mn {
+      height: 200px;
+      width: 200px;
+    }
+
+    #mn:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+
+    #m {
+      height: 500px;
+      width: 400px;
+      display: flex;
+    }
+/* blogpage */
+.blog-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .blog-card {
+      transition: transform 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Modal Image Hover Effect */
+    .modal-img-box {
+      position: relative;
+      width: 100%;
+      height: 420px;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .modal-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      transform-origin: top left;
+    }
+
+    /* nav js drawer */
+
+    .side-drawer {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      /* hidden initially */
+      width: 250px;
+      height: 100%;
+      background: #fff;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+      transition: left 0.3s ease;
+      padding-top: 60px;
+      z-index: 1050;
+    }
+
+    .side-drawer.active {
+      left: 0;
+    }
+
+    .side-drawer a {
+      display: block;
+      padding: 15px 20px;
+      font-size: 18px;
+      text-decoration: none;
+      color: #222;
+      transition: 0.3s;
+    }
+
+    .side-drawer a:hover {
+      background: #f4f4f4;
+    }
+
+    .side-drawer .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* Overlay when menu is open */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: none;
+      z-index: 1049;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+    #kk {
+      height: 400px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    #drawer a:hover {
+      background-color: #464545;
+      transition: o.3sec ease;
+      color: white;
+    }
+
+    #drawer {
+      background-color: #e0dcdc;
+    }
+
+
+    #z {
+      color: #fffefe;
+      text-decoration: none;
+      border-style: solid;
+      background-color: #fcfcfc3b;
+      border-color: #fcfbfb;
+      border-radius: 10px;
+      padding: 5px;
+    }
+
+    .social-icons i {
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+
+    .social-icons i:hover {
+      color: #9fa4a3;
+      transform: scale(1.2);
+    }
+
+    .store-icons img {
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+
+    .store-icons img:hover {
+      transform: scale(1.05);
+      filter: brightness(1.15);
+    }
+
+    .payment-icons img {
+      transition: 0.3s ease;
+      cursor: pointer;
+    }
+
+    .payment-icons img:hover {
+      transform: scale(1.15);
+      filter: brightness(1.2);
+    }
+
+    .blog-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    .blog-img {
+      height: 230px;
+      object-fit: cover;
+      border-bottom: 3px solid #000;
+    }
+
+    #blog h2 {
+      font-size: 36px;
+    }
+
+    @media (max-width: 768px) {
+      .blog-img {
+        height: 180px;
+      }
+    }
+  </style>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Side drawer functions
+      window.openDrawer = function () {
+        document.getElementById("drawer").classList.add("active");
+        document.getElementById("overlay").classList.add("active");
+      }
+
+      window.closeDrawer = function () {
+        document.getElementById("drawer").classList.remove("active");
+        document.getElementById("overlay").classList.remove("active");
+      }
+    });
+
+  <!-- Bootstrap JS -->
+
+// JS FUNCTION -->
+
+  function openBlog(title, image, content) {
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalImage").src = image;
+    document.getElementById("modalContent").innerText = content;
+  }
+
+
+  </script>
+
+<body id="home">
+  <header>
+    <!-- Navbar -->
+    <div id="sk">
+      <!-- Navbar -->
+      <nav class="navbar navbar-dark fixed-top navbar-expand-lg p-3 " style="background-color: rgb(45, 44, 44);">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <a id="wq" href="#home"><b>🍵 SK CAFE</b></a>
+          </a>
+
+          <!-- Desktop Horizontal Menu -->
+          <div class="collapse navbar-collapse d-none d-lg-flex ms-5" style="margin-right: 200px;">
+
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#home">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#menuimg">MENU</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#img">IMAGE GALLERY</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#blog">BLOG</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login page.html">LOG IN</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Mobile Hamburger Menu -->
+          <button class="navbar-toggler d-lg-none" type="button" onclick="openDrawer()">
+            <span><i class="bi bi-list fs-2"></i></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Side Drawer (Mobile Only) -->
+      <div id="drawer" class="side-drawer">
+
+        <span class="close-btn" onclick="closeDrawer()">&times;</span>
+        <a href="#home" onclick="closeDrawer()">HOME</a>
+        <a href="#about" onclick="closeDrawer()">ABOUT</a>
+        <a href="#menuimg" onclick="closeDrawer()">MENU</a>
+        <a href="#img" onclick="closeDrawer()">IMAGE GALLERY</a>
+        <a href="#blog" onclick="closeDrawer()">BLOG</a>
+        <a href="login page.html" onclick="closeDrawer()">LOGIN</a>
+
+      </div>
+
+      <!-- Overlay -->
+      <div id="overlay" class="overlay" onclick="closeDrawer()"></div>
+
+      <div class="container-fluid ms-5 py-5" style="color: white;">
+        <div class="row justify-content-start py-5 px-3">
+          <div class="col-lg-4 col-md-5 col-sm-6">
+            <h2 class="fw-bold " style="margin-top:100px;">BREWED WITH PASSION SERVED WITH LOVE</h2>
+            <hr class="border-light">
+            <p class="mt-2">
+              Experience the true art of coffee, crafted from handpicked beans and
+              slow-roasted to perfection. Every cup is a journey of rich aroma, bold flavor,
+              and pure satisfaction — made fresh, just for you.
+            </p>
+            <div class="mt-3">
+              <a id="uu" href="roder list.html" class="btn btn-outline-light mb-2 me-2">ORDER NOW</a>
+              <a id="uu" href="shop.html" class="btn btn-outline-light mb-2">CONTACT US</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </header>
+
+  <!--about page-->
+
+  <div class="row  justify-content-around">
+
+    <div class="col-md-12 col-sm-12 " id="about" style="text-align: center;
+    background: linear-gradient(135deg, #525050, #8c8b8b);
+    color: rgb(9, 9, 9);font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size:large;
+    padding-bottom: 150px;padding-top:100px; width: 100%;">
+      <h2 class="text-center mb-3 mt-5 pb-4"><b><u> ABOUT </u></b>
+      </h2>
+      <p class=" text-align-center mb-5 mx-5 ">At SK CAFE, we believe a cup of coffee is more than just a drink — it’s
+        an
+        experience. Our café is a warm and welcoming space where comfort meets flavor, and every visit feels like home.
+
+        We serve freshly brewed coffee made from the finest hand-selected beans, ensuring each sip is rich, aromatic,
+        and deeply satisfying. Alongside our signature coffee, you’ll find an assortment of beverages, snacks, and
+        desserts — all thoughtfully crafted to complement your drink.
+
+        Whether you’re here to catch up with friends, get some work done, or simply unwind, SK CAFE offers the perfect
+        blend of taste, ambiance, and comfort.
+      </p>
+
+      <img src="about cafe img.jpg"
+        style="width: 200px;height: 250px; border-radius: 30px;
+        margin-top: 50px;padding-bottom:60px;">
+    </div>
+  </div>
+
+  <!-- menu -->
+
+  <div class="row" id="menuimg">
+
+    <h2 class="text-center" id="menu" style="padding-top: 100px; padding-bottom:80px;">
+      <u><b>COFFEE MENU</b></u>
+    </h2>
+
+    <div class="container">
+      <div class="row text-center" style="font-size: larger;">
+        <div class="col-lg-4 col-sm-6 col-md-4">
+          <img id="ff" src="menu cafe 1.webp" alt="Menu item">
+          <p>ICED MOCHA</p>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 col-md-4">
+          <img id="ff" src="menu cafe 2.jpg" alt="Menu item">
+          <p>AMEREICANO</p>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 col-md-4">
+          <img id="ff" src="menu cafe 3.webp" alt="Menu item">
+          <p>CAPPUCCINO</p>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 col-md-4">
+          <img id="ff" src="menu cafe 4.jpg" alt="Menu item">
+          <p>ESPRESSO</p>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 col-md-4">
+          <img id="ff" src="menu cafe 5.jpg" alt="Menu item">
+          <p>COLD COFFEE</p>
+        </div>
+
+        <div class="col-lg-4 col-sm-6 col-md-4">
+          <img id="ff" src="menu cafe 6.jpeg" alt="Menu item">
+          <p>LATTE</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 pb-3 pt-5 justify-content-center d-flex">
+        <a id="z" href="roder list.html">COFFEE MENU</a>
+      </div>
+    </div>
+  </div>
+
+  <!--img gallary-->
+
+  <div class="row menu pb-5" id="img" style="background: linear-gradient(135deg, #f0f0f0, #d9d9d9, #b3b3b3);">
+
+    <h2 class="text-center pb-5" id="img" style="text-align: center;padding-top: 100px; padding-bottom:30px;">
+      <u><b>IMAGE
+          GALLERY</b></u>
+    </h2>
+
+
+    <div class="container pt-5 pb-5">
+      <div class="row text-center g-5 pb-5">
+        <div class="col-lg-4 col-sm-6 col-md-4">
+          <img id="mn" src="img gallery 1.jpg" class="img-fluid" alt="Menu item">
+
+        </div>
+        <div class="col-lg-4 col-sm-6 col-md-4">
+          <img id="mn" src="img gallery 2.jpg" class="img-fluid" alt="Menu item">
+
+
+        </div>
+        <div class="col-lg-4 col-sm-6 col-md-4">
+          <img id="mn" src="img gallery 3.avif" class="img-fluid" alt="Menu item">
+
+        </div>
+        <div class="col-lg-4 col-sm-6 col-md-4">
+          <img id="mn" src="img gallery 4.jpg" class="img-fluid" alt="Menu item">
+
+        </div>
+        <div class="col-lg-4 col-sm-6 col-md-4">
+          <img id="mn" src="img gallery 5.webp" class="img-fluid" alt="Menu item">
+
+        </div>
+        <div class="col-lg-4 col-sm-6 col-md-4">
+          <img id="mn" src="img gallery 6.avif" class="img-fluid" alt="Menu item">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <!-- BLOG SECTION -->
+<section id="blog" style="padding: 100px 0; background: linear-gradient(135deg, #f0f0f0, #d9d9d9, #b5b5b5);">
+  <div class="container mb-5">
+    <h2 class="text-center mb-5" style="letter-spacing: 1px; margin-top: 50px;">
+      <b><u>OUR BLOG</u></b>
+    </h2>
+
+    <div class="row g-4">
+
+      <!-- Blog 1 -->
+      <div class="col-md-4">
+        <div class="card blog-card h-100">
+          <img src="blog 1.avif" class="blog-img" alt="">
+          <div class="card-body">
+            <h5 class="fw-bold">5 Tips to Brew Perfect Coffee at Home</h5>
+            <p>Use fresh beans, grind just before brewing, maintain water temperature between 90–96°C, use proper coffee-to-water ratio, and brew with patience for café-style coffee...</p>
+          </div>
+          <div class="card-footer bg-white border-0 text-end">
+            <button class="btn btn-dark btn-sm rounded-pill px-3"
+              data-bs-toggle="modal"
+              data-bs-target="#blogModal"
+              onclick="openBlog(
+                '5 Tips to Brew Perfect Coffee at Home',
+                'blog 1.avif',
+                'Brewing coffee at home can be both simple and enjoyable if you follow a few key steps. Start with freshly roasted beans to get the best aroma, and grind them just before brewing to preserve their flavor. Maintain the water temperature between 90–96°C and use the correct coffee-to-water ratio to ensure a rich, balanced cup. By taking your time and paying attention to these details, you can make every morning coffee taste just like it came from a professional café.'
+              )">
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog 2 -->
+      <div class="col-md-4">
+        <div class="card blog-card h-100">
+          <img src="blog 2.avif" class="blog-img" alt="">
+          <div class="card-body">
+            <h5 class="fw-bold">The Art of Coffee Roasting</h5>
+            <p>Coffee roasting is an art that transforms green coffee beans into aromatic, flavorful brown beans.The roasting process unlocks the unique taste, aroma, and body of each bean...</p>
+          </div>
+          <div class="card-footer bg-white border-0 text-end">
+            <button class="btn btn-dark btn-sm rounded-pill px-3"
+              data-bs-toggle="modal"
+              data-bs-target="#blogModal"
+              onclick="openBlog(
+                'The Art of Coffee Roasting',
+                'blog 2.avif',
+                'Coffee roasting is an art that transforms green coffee beans into aromatic, flavorful brown beans. The roasting process unlocks the unique taste, aroma, and body of each bean, depending on whether you choose a light, medium, or dark roast. Light roasts preserve the original flavor of the bean, medium roasts bring a balanced aroma and sweetness, and dark roasts create bold, intense flavors. Understanding roasting helps you appreciate the craft behind every perfect cup of coffee.'
+              )">
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog 3 -->
+      <div class="col-md-4">
+        <div class="card blog-card h-100">
+          <img src="blog 3.avif" class="blog-img" alt="">
+          <div class="card-body">
+            <h5 class="fw-bold">Seasonal Coffee Recipes You Must Try</h5>
+            <p>Seasonal coffee recipes are a delightful way to explore new flavors throughout the year. From the warm and spicy Pumpkin Spice Latte in autumn to the refreshing Iced Caramel Coffee in summer...</p>
+          </div>
+          <div class="card-footer bg-white border-0 text-end">
+            <button class="btn btn-dark btn-sm rounded-pill px-3"
+              data-bs-toggle="modal"
+              data-bs-target="#blogModal"
+              onclick="openBlog(
+                'Seasonal Coffee Recipes You Must Try',
+                'blog 3.avif',
+                'Seasonal coffee recipes are a delightful way to explore new flavors throughout the year. From the warm and spicy Pumpkin Spice Latte in autumn to the refreshing Iced Caramel Coffee in summer, each recipe brings a unique twist to your regular cup. Festive drinks like Peppermint Mocha and holiday-themed blends make celebrations extra special. By experimenting with seasonal ingredients and flavors, you can create coffee experiences that are both exciting and comforting, perfect for every mood and occasion.'
+              )">
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div class="modal fade" id="blogModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-img-box">
+          <img id="modalImage" alt="">
+        </div>
+        <p id="modalContent"></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal fade" id="blogModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <img id="modalImage" class="img-fluid rounded mb-3" alt="">
+        <p id="modalContent"></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <!-- footer -->
+  <footer class="text-block py-5" style="background: linear-gradient(135deg, #e0e0e0, #c0c0c0, #fcfbfb);">
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <!-- LEFT COLUMN -->
+        <div class="col-md-6 col-lg-5">
+          <div class="d-flex align-items-center mb-3">
+            <h4 class="m-0">🍵 SK CAFE</h4>
+          </div>
+
+          <h5>Contact</h5>
+
+          <p><strong>Address:</strong> 123/52 Compton Street, Erode, Tamil Nadu</p>
+          <p><strong>Phone:</strong> +91-2071234567</p>
+          <p><strong>Hours:</strong> Mon–Sat: 10 AM – 10:30 PM</p>
+          <p><strong>Hours:</strong> Sunday: 9 AM – 11:30 PM</p>
+          <p><strong>Browse:</strong> www.skcoffeeshop.com</p>
+        </div>
+        <!-- RIGHT COLUMN -->
+
+
+        <div class="col-6 ms-5">
+          <h5 class="mt-3">Payment Gateways</h5>
+
+          <div class="d-flex flex-wrap gap-3 payment-icons mt-3">
+            <img src="g pay-logo.svg" width="100">
+            <img src="BHIM.logo.png" width="100" height="30">
+            <img src="phonepay.svg" width="80">
+          </div>
+
+
+          <h5 class="mt-4">Follow</h5>
+          <div class="d-flex gap-3 fs-4 social-icons">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-twitter"></i>
+            <i class="bi bi-youtube"></i>
+          </div>
+        </div>
+      </div>
+      <!-- COPYRIGHT -->
+      <div class="text-center border-top border-secondary mt-4 pt-3">
+        <p class="m-0">© 2025 SK CAFE | All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

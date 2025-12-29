@@ -1,0 +1,10 @@
+INDEX VERSION 1.134+C:\Users\ASUS\OneDrive\Desktop\SK FRONT END PROJECT\.metadata\.plugins\org.eclipse.jdt.core
+3435648363.index
+688116681.index
+441222119.index
+2021051417.index
+1865797976.index
+3746528135.index
+969968605.index
+2427556340.index
+1373244498.index
