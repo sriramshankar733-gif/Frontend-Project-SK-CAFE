@@ -241,6 +241,14 @@ body, html {
   }
 }
 
+/* BLOG MODAL IMAGE FIX */
+.blog-modal-img {
+  max-height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+
 /* SIDE DRAWER */
 .side-drawer {
   position: fixed;
@@ -358,7 +366,7 @@ body, html {
 .newsletter-input {
   background: #2a2a2a;
   border: 1px solid #444;
-  color: white !important;
+  color: rgb(11, 11, 11) !important;
   border-radius: 30px 0 0 30px;
   padding: 10px 20px;
 }
@@ -501,9 +509,9 @@ body, html {
       <div class="container-fluid py-5" style="color: white;">
         <div class="row justify-content-start py-">
           <div class="col-lg-4 col-md-7 col-sm-8 my-5 ms-2">
-            <h2 class="fw-bold " style="margin-top:100px;font-family:'Times New Roman', Times, serif;">BREWED WITH PASSION SERVED WITH LOVE</h2>
+            <h2 class="fw-bold " style="margin-top:100px;font-family:'Times New Roman', Times, serif;letter-spacing: 2px;">BREWED WITH PASSION SERVED WITH LOVE</h2>
             <hr class="border-light">
-            <p class="mt-2">
+            <p class="mt-2" style="letter-spacing: 1px;">
               Experience the true art of coffee, crafted from handpicked beans and
               slow-roasted to perfection. Every cup is a journey of rich aroma, bold flavor,
               and pure satisfaction — made fresh, just for you.
@@ -779,9 +787,9 @@ body, html {
   </div>
 </section>
 
-<!-- MODAL -->
+<!-- BLOG MODAL -->
 <div class="modal fade" id="blogModal" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
 
       <div class="modal-header">
@@ -789,30 +797,9 @@ body, html {
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
-      <div class="modal-body">
-        <div class="modal-img-box">
-          <img id="modalImage" alt="">
-        </div>
-        <p id="modalContent"></p>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- MODAL -->
-<div class="modal fade" id="blogModal" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalTitle"></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <div class="modal-body">
-        <img id="modalImage" class="img-fluid rounded mb-3" alt="">
-        <p id="modalContent"></p>
+      <div class="modal-body text-center">
+        <img id="modalImage" class="img-fluid rounded mb-3 blog-modal-img" alt="">
+        <p id="modalContent" class="text-start"></p>
       </div>
 
     </div>
@@ -859,7 +846,7 @@ body, html {
           <h5 class="footer-title">Newsletter</h5>
           <p class="small mb-3">Subscribe to get special offers and coffee tips!</p>
           <form class="d-flex">
-            <input type="email" class="form-control newsletter-input" placeholder="Your Email">
+            <input type="email" class="form-control newsletter-input bg-light input-dark" placeholder="Your Email">
             <button class="newsletter-btn" type="submit">Join</button>
           </form>
         <div class="mt-4">
