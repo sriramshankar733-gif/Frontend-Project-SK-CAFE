@@ -62,35 +62,54 @@
     <div class="login-box">
         <h2>🍵 SK CAFE LOGIN</h2>
 
-        <form>
-            <div class="mb-3">
-                <label class="text-coffee">Email</label>
-                <input type="email" class="form-control" placeholder="Enter Email">
-            </div>
+        <form id="loginForm" class="needs-validation" novalidate>
+    <div class="mb-3">
+        <label class="text-coffee">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
+        <div class="invalid-feedback">
+            Please enter a valid email address.
+        </div>
+    </div>
 
-            <div class="mb-3">
-                <label class="text-coffee">Password</label>
-                <input type="password" id="password" class="form-control" placeholder="Enter Password">
-            </div>
+    <div class="mb-3">
+        <label class="text-coffee">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="Enter Password" required minlength="6">
+        
+        <div class="invalid-feedback">
+            Password must be at least 6 characters long.
+        </div>
+    </div>
 
-            <button type="submit" class="btn btn-coffee w-100 mt-2">Login</button>
+    <button type="submit" class="btn btn-coffee w-100 mt-2">Login</button>
 
-            <p class="text-center mt-3 text-coffee">
+    <p class="text-center mt-3 text-coffee">
                 Don't have an account? <a href="Registration.html" class="text-decoration-none text-coffee">Register</a>
             </p>
              <p class="text-center mt-3 text-coffee">
                 Back To Home Page? <a href="index.html" class="text-decoration-none text-coffee">Back</a>
             </p>
-        </form>
+    </form>
+         
     </div>
 
-    <script>
-        // Optional: Password show/hide
-        function togglePassword() {
-            const pass = document.getElementById("password");
-            pass.type = pass.type === "password" ? "text" : "password";
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+        const form = event.target;
+
+        // Check if the form is valid according to HTML5 attributes
+        if (!form.checkValidity()) {
+            event.preventDefault(); // Stop form from submitting
+            event.stopPropagation(); // Stop event bubbling
+        } else {
+            // Optional: Handle your login logic here
+            event.preventDefault();
+            alert("Success! Form is valid and ready to send to the server.");
         }
-    </script>
+
+        // Add the Bootstrap 'was-validated' class to show red/green colors
+        form.classList.add('was-validated');
+    }, false);
+</script>
 
 </body>
 
